@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#94dbc5" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-150.1172,-69.4112,140.625,78.5605</Parameter>
+  <Parameter name="center">-5.2734,35.1738,2</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="interactivity_layer">countries</Parameter>
+  <Parameter name="interactivity_fields">GEOUNIT,SOVEREIGNT</Parameter>
+  <Parameter name="minzoom">2</Parameter>
+  <Parameter name="maxzoom">7</Parameter>
+  <Parameter name="name"><![CDATA[British Crown Dependencies and Overseas Territories]]></Parameter>
+  <Parameter name="template"><![CDATA[{{#__location__}}{{/__location__}}{{#__teaser__}}{{GEOUNIT}} ({{SOVEREIGNT}}){{/__teaser__}}{{#__full__}}{{/__full__}}]]></Parameter>
+</Parameters>
+
+
+<Style name="countries" filter-mode="first" >
+  <Rule>
+    <Filter>([SOVEREIGNT] = 'United Kingdom')</Filter>
+    <PolygonSymbolizer fill="#e65a2b" />
+    <LineSymbolizer stroke="#e65a2b" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+</Style>
+<Style name="countries-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#86e2bb" stroke-width="2" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="countries"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>countries-outline</StyleName>
+    <StyleName>countries</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/currine/Documents/MapBox/project/unitedkingdom1/layers/countries/82945364-10m-admin-0-countries.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="id"><![CDATA[countries]]></Parameter>
+       <Parameter name="project"><![CDATA[unitedkingdom1]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>UK Geographies</title>
+
+<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<!--javascript-->
+    <script src="js/my.js"></script>
+<!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider-->
+    <script src="js/bxslider/bxslider.min.js"></script>
+    <link href="js/bxslider/bxslider.css" rel="stylesheet">
+<!-- tooltipster-->
+    <link rel="stylesheet" type="text/css" href="js/tooltipster/css/tooltipster.css" />
+    <script type="text/javascript" src="js/tooltipster/js/jquery.tooltipster.min.js"></script>
+<!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+<!-- MotherJones Quiz-->
+    <script src="js/tabletop.js"></script>
+    <script src="js/newsquiz.min.js"></script>
+
+
+    
+<script>
+    $(document).ready(function(){
+        $('.tipsy').tooltipster({
+            position: 'bottom-left',
+            offsetX: 5,
+            multiple: true,
+            theme: 'light',
+        });
+        $('.tipsy2').tooltipster({
+            position: 'right',
+            offsetY: -20,
+            theme: 'tooltipster-noir',
+        });
+        $('.tipsy3').tooltipster({
+            theme: 'tooltipster-noir',
+            maxWidth: 275, 
+        });
+        $('#territories').tooltipster({
+            content: $('<span>Akrotiri and Dhekelia (Cyprus)</br>Anguilla</br> Bermuda </br>British Antarctic Territory</br>BritishIndian Ocean Territory </br>British Virgin islands </br>Cayman Islands </br>Falkland Islands </br>Gibraltar</br>Montserrat</br>Pitcairn Island</br>St Helena + dependencies (Ascension Island, Tristan da Cunha)</br>South Georgia and the South Sandwich Islands</br>Turks and Caicos Islands</br><a href="http://en.wikipedia.org/wiki/British_Overseas_Territories" style="color:#94DBC5;">Read more about them here.</a></span>'),
+            interactive: true,
+            theme: 'tooltipster-noir',
+        });
+        $('#dependencies').tooltipster({
+            content: $('<span>Isle of Man</br>Guernsey Island </br>Jersey Island</br><a href="http://en.wikipedia.org/wiki/Crown_dependencies" style="color:#94DBC5;">Read more about them here.</a></span>'),
+            interactive: true,
+            theme: 'tooltipster-noir',
+        });
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true,
+            infiniteLoop: true,
+        });
+    });
+</script>
+
+</head>
+
+<body>
+<div>
+    <div>
+        <ul class="bxslider">
+          <li>
+            <div>
+                <img class="bgimage" src="images/world.png">
+                <div style="position: absolute; z-index: 200; top: 0; left: 0; width: 100%; height: 100%; vertical-align: middle; text-align: center;">
+                    <h1 class="title">A very quick look at the geography of being British.</h1>
+                </div>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-8">
+                    <img id="gb" src="images/gb.png">
+            </div>
+            <div class="col-md-4">
+                <h2>British people are from Great Britain, right?</h2>
+                <ul>
+                    <li>Not necessarily.</li>
+                    <li>Great Britain is actually a geographic region, not a country.</li>
+                    <li>Great Britain is the largest island in the <a onmouseover="bisles()"; onmouseout="gb1()"; href="#">British Isles</a>. It contains three countries: England, Scotland, and Wales.</li>
+                </ul>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-8">
+                    <img id="ireland" src="images/ireland.png">
+            </div>
+            <div class="col-md-4">
+                <h2>Ireland</h2>
+                <ul>
+                    <li>The second largest island in the British Isles is Ireland. Ireland is made up of two countries: <a onmouseover="sireland()"; onmouseout="ire()"; href="#">Ireland</a> and <a onmouseover="nireland1()"; onmouseout="ire()"; href="#">Northern Ireland</a>.</li>
+                    <li>Irish people are NOT British, but Northern Irish people are!</li>
+                    <li>This is because Northern Ireland is part of the <a onmouseover="uk2()"; onmouseout="ire()"; href="#">United Kingdom</a>.</li>
+                </ul>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-8">
+                    <img id="uk" src="images/unitedkingdom1.png">
+            </div>
+            <div class="col-md-4">
+                <h2>Unlike Great Britian, the United Kingdom is a country.</h2>
+                <div>
+                    <ul>
+                        <li>Actually, the UK is a country of countries. It is made up of: <a onmouseover="england()"; onmouseout="unitedkingdom()"; href="#">England</a>, <a onmouseover="scotland()"; onmouseout="unitedkingdom()"; href="#">Scotland</a>, and <a onmouseover="wales()"; onmouseout="unitedkingdom()"; href="#">Wales</a> and <a onmouseover="nireland()"; onmouseout="unitedkingdom()"; href="#">Northern Ireland</a>.</li>
+                        <li>These countries are the only "countries" in the world that lack state <a class="link tipsy3" title="Sovereignty is the full right and power to govern oneself.">sovereignty</a>.</li>
+                        <li>Fun fact: "UK" is short for "The United Kingdom of <a onmouseover="gb2()"; onmouseout="unitedkingdom()"; href="#">Great Britain</a> and <a onmouseover="nireland2()"; onmouseout="unitedkingdom()"; href="#">Northern Ireland</a>."</li>
+                    </ul>
+                </div>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-8">
+                <iframe width="100%" height="500px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/elcurr.p4jnstt9.html?access_token=pk.eyJ1IjoiZWxjdXJyIiwiYSI6IkZMekZlUEEifQ.vsXDy4z_bxRXyhSIvBXc2A"></iframe>            </div>
+            <div class="col-md-4">
+                <h2>Who is British?</h2>
+                <ul>
+                    <li>British people are nationals of the United Kingdom, British Overseas Territories, or British Crown Dependencies.</li>
+                    <li>British Overseas Territories are former British colonies. They are not independent and they rely on the UK for military and economic assistance. <a class="link" id="territories">There are 14.</a></li>
+                    <li>British Crown Dependencies are self-governing but they are not sovereign states. <a class="link" id="dependencies">There are 3.</a></li>
+                </ul>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-8">
+                <img src="images/unitedkingdom1.png">
+                <div class="bubble tipsy2" title="Only the Queen can live here!"></div>                    
+            </div>
+            <div class="col-md-4">
+                <h2>A British person is not necessarily a British citizen.</h2>
+                <ul>
+                    <li>While anyone born or nationalized in the UK, a British Overseas Territory, or a  Crown Dependency is a "British person," only nationals of the UK are "British citizens."</li>                    
+                    <li>Only "British citizens" have the <a class="link tipsy3" title="Right of Abode means you're allowed to live or work in the UK without any immigration restrictions.">Right of Abode</a> in the UK.</li>
+                </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+                <h1 style="text-align: center;">What did you learn?</h1>
+            </div>
+            <div style="margin: auto;">
+                <iframe src="quiz.html" style="width: 80%; height: 350px; margin:0 10% 0 10%"></iframe>
+            </div>
+          </li>
+          <li>
+            <img src="images/world.png" style="position: absolute; height: 100%;">
+            <div class="sources">
+                <h2>Sources and Thanks</h2>
+                <ul>
+                    <li>Information from <a class="link" href="http://learnenglish.britishcouncil.org/en/how/how-understand-difference-between-uk-and-great-britain">britishcouncil.org</a> and <a class="link" href="https://www.youtube.com/watch?v=rNu8XDBSn10">C.G.P. Grey</a>.</li>
+                    <li>A big thanks to <a class= "link" href="http://geography.unc.edu/people/faculty-1/john-pickles">John Pickles </a>(UNC professor of Geography) for his help and support.</li>
+                </ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    var quiz = jQuery('#quiz_container').quiz('0AleexCDiW14XdGRNRHBZV2p5ZDdKaXNnQnJ1SkppZHc');
+</script>
+
+</html>
